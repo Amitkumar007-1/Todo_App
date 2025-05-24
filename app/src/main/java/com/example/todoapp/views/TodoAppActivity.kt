@@ -27,10 +27,8 @@ import kotlinx.coroutines.flow.callbackFlow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.filter
-import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
-import kotlin.streams.toList
 
 class TodoAppActivity: AppCompatActivity() {
     private lateinit var todoAppActivityBinding:ActivityTodoAppBinding
@@ -68,7 +66,7 @@ class TodoAppActivity: AppCompatActivity() {
     private fun setUpObservers() {
         todoAppViewModel.liveTodoListData.observe(this){
             when(it){
-                is Resource.Loading-> println("Loading Activity ")
+                is Resource.Loading-> {}
 
                 is Resource.Error-> Toast.makeText(this,"${it.message}",Toast.LENGTH_SHORT).show()
 
