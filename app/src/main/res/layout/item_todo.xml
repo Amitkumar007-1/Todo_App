@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title_todo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:breakStrategy="high_quality"
+        android:hyphenationFrequency="none"
+        android:text="title todo"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_margin="10dp"
+        />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/desc_todo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/title_todo"
+        app:layout_constraintStart_toStartOf="@+id/title_todo"
+        android:breakStrategy="high_quality"
+        android:hyphenationFrequency="none"
+        android:text="desc todo"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_margin="10dp"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

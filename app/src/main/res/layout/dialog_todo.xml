@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@color/white">
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txt_todo_app"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add_todo"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edt_todo"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="Please Add Note"
+        app:boxStrokeColor="@color/btn_floating"
+        app:boxStrokeWidth="1dp"
+        app:layout_constraintTop_toBottomOf="@+id/txt_todo_app"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+    >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edt_desc"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="Please Add Description"
+        app:boxStrokeColor="@color/splash_screen_color"
+        app:boxStrokeWidth="1dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/edt_todo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_cancel"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/btn_cancel"
+        app:cornerRadius="10dp"
+        app:layout_constraintTop_toBottomOf="@id/edt_desc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_submit"
+        />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_submit"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:cornerRadius="10dp"
+        android:backgroundTint="@color/btn_submit"
+        app:layout_constraintTop_toTopOf="@id/btn_cancel"
+        app:layout_constraintStart_toEndOf="@id/btn_cancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/btn_cancel"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

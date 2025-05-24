@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="splash_screen_color">#1e81b0</color>
+    <color name="btn_floating">#32DB32</color>
+    <color name="btn_cancel">#E90E23</color>
+    <color name="btn_submit">#32DB32</color>
+
+</resources>
